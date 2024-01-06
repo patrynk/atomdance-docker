@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  atomdance:
+    image: atomdance:1.0-beta
+    build: .
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: "host"

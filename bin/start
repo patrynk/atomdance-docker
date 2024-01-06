@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+CPPTRAJ_HOME=/cpptraj
+PATH="${PATH}:${CPPTRAJ_HOME}/bin:/home/atomuser/.local/bin"
+
+chmod +r /data/*
+echo "Linking shared data prior to analysis..."
+find /data/ -type f \( -name "*.pdb" -o -name "*.nc" -o -name "*.prmtop" \) -exec ln -sf {} /atomdance/ \;
+echo "Done"
+python3 ATOMDANCE.py
