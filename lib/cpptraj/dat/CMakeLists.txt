@@ -1,5 +1,0 @@
-if(INSIDE_AMBER)
-  install(DIRECTORY . USE_SOURCE_PERMISSIONS DESTINATION AmberTools/src/cpptraj/dat/)
-else()
-  install(DIRECTORY . USE_SOURCE_PERMISSIONS DESTINATION dat/)
-endif()
